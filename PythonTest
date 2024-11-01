@@ -1,0 +1,20 @@
+#Write a Python program to check if a string is a palindrome.
+
+
+def palindrome(user_input):
+    if user_input.lower() == user_input[::-1].lower():
+
+        return 'is palindrome'
+    return 'is not palindrome'
+
+
+
+
+while True:
+    user_input1 = input("Please enter your word to check if it's a palindrome ")
+    print(palindrome(user_input1))
+    user_input2 = input("do you want to continue? Y/N")
+    if user_input2 == 'n':
+        break
+    else:
+        continue
