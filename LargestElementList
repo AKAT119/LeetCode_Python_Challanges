@@ -1,0 +1,12 @@
+#Write a Python program to find the largest element in a list.
+
+def find_largest_element(arr):
+    temp = arr[0]
+    for i in arr:
+        if temp < i:
+            temp = i
+    return temp
+    
+
+arr_sample= [1,2,0,6,10]
+print(find_largest_element(arr_sample))
