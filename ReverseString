@@ -1,0 +1,8 @@
+#Write a Python program to reverse a string
+def reverse_string(str_Sample):
+    reveresed_str =  str_Sample[::-1]
+    return reveresed_str
+
+
+string_inout = "Azin"
+print(reverse_string(string_inout))
