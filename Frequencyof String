@@ -1,0 +1,15 @@
+#Write a Python program that takes a sentence as input and counts the frequency of each word in the sentence.
+
+
+def frequancy_string(string_s):
+    frq_dict = {}
+    for word in string_s.split():
+        if word in frq_dict:
+            frq_dict[word] +=1
+        else:
+            frq_dict[word] = 1
+    return frq_dict
+
+
+user_input = input("Please entre ur sentence:   .....")
+print(frequancy_string(user_input))
