@@ -1,6 +1,6 @@
-#Code with Options to Ignore Spaces and Make It Case-Insensitive:
+#Code with Options to Ignore Spaces and Make It Case-Insensitive:Az
 
-def character_frequency(string_s, ignore_spaces=True, case_insensitive=True):
+def character_frequency(string_s, case_insensitive=True):
     frq_dict = {}
     
     # Modify the string based on options
@@ -8,7 +8,7 @@ def character_frequency(string_s, ignore_spaces=True, case_insensitive=True):
         string_s = string_s.lower()  # Convert to lowercase for case-insensitive counting
     
     for char in string_s:
-        if ignore_spaces and char == " ":
+        if  char == " ":
             continue  # Skip spaces if ignore_spaces is True
         if char in frq_dict:
             frq_dict[char] += 1
