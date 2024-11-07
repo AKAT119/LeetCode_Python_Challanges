@@ -1,0 +1,21 @@
+#Code with Options to Ignore Spaces and Make It Case-Insensitive:
+
+def character_frequency(string_s, ignore_spaces=True, case_insensitive=True):
+    frq_dict = {}
+    
+    # Modify the string based on options
+    if case_insensitive:
+        string_s = string_s.lower()  # Convert to lowercase for case-insensitive counting
+    
+    for char in string_s:
+        if ignore_spaces and char == " ":
+            continue  # Skip spaces if ignore_spaces is True
+        if char in frq_dict:
+            frq_dict[char] += 1
+        else:
+            frq_dict[char] = 1
+    return frq_dict
+
+# Test the function
+user_input = input("Please enter a sentence: ")
+print(character_frequency(user_input))
