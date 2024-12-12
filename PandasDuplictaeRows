@@ -1,0 +1,28 @@
+import pandas as pd
+
+def duplicateRemoval(df):
+    duplicateRows = df[df.duplicated(keep = False)]
+    return duplicateRows
+        
+    
+
+
+
+
+
+
+
+
+
+
+data = {
+    'A': [1, 2, 2, 3, 4, 4, 4],
+    'B': ['x', 'y', 'y', 'z', 'w', 'w', 'w']
+}
+df = pd.DataFrame(data)
+print("Original DataFrame:")
+print(df)
+
+duplicates = duplicateRemoval(df)
+print("\nDuplicate Rows:")
+print(duplicates)
