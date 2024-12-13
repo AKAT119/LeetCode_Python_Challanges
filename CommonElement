@@ -1,2 +1,21 @@
 #Write a Python program to find the common elements between two lists
 
+
+def commonElement(L1,L2):
+
+    listCommonElements = list(set(L1) & set(L2))
+    return listCommonElements
+
+
+
+
+list1 = ['a', 'b', 'c', 'd', 'e']
+list2 = ['d', 'e', 'f', 'g', 'h']
+
+print("common elements are : ", commonElement(list1,list2))
+
+
+
+
+
+
