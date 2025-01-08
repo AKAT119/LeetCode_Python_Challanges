@@ -1,0 +1,22 @@
+'''Write a Python function that takes a list 
+of integers and an integer target as input and returns all unique pairs of
+ numbers from the list that sum up to the target.'''
+
+def find_pairs(nums, target):
+    seen = set()  # To track numbers we've seen
+    pairs = set()  # To track unique pairs
+    
+    for num in nums:
+        complement = target - num
+        if complement in seen:
+            # Add the pair as a sorted tuple to ensure uniqueness
+            pairs.add(tuple((num, complement)))
+        seen.add(num)  # Add the current number to the seen set
+    
+    # Convert set of tuples to list of lists
+    return [list(pair) for pair in pairs]
+
+# Example usage
+nums = [2, 4, 3, 7, 1, 5, 9]
+target = 6
+print("Unique pairs:", find_pairs(nums, target))
