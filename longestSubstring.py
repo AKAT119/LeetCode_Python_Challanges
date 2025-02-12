@@ -14,7 +14,7 @@ def longest_unique_substring(strg_smpl):
             l+=1
         char_set.add(strg_smpl[r])
         len_window = (r - l) + 1
-       # longest = max(longest, len_window)
+       # longest = max(longest, len_window) if you want to return the length number
         if len_window > longest:
             longest = len_window
             start_index = l  # Update the start of the longest substring
