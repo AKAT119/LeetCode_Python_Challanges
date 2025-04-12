@@ -9,6 +9,4 @@ def second_largest(a):
 
 
 
-
-
-print(second_largest(a))  # Output: 10
+print(second_largest(a)) 
